@@ -41,9 +41,16 @@ function App() {
   } 
 
   return (
+    <>
+    <div className = "Header">
+      <h1> To do List!</h1>
+    </div>
+    <div className = "Header">
+      <h3>Type in Todos below to get started!</h3>
+    </div>
     <div className="App">
       <form onSubmit={(event)=>{handleNewTodoSubmit(event);}}>
-        <input onChange = {(event)=>{setNewTodo(event.target.value)}} type="text" value = {newTodo}/>
+        <input onChange = {(event)=>{setNewTodo(event.target.value)}} placeholder = "e.g. Do Laundry" type="text" value = {newTodo}/>
         <div>
           <button className='button' >Add</button>
         </div>
@@ -66,6 +73,7 @@ function App() {
       })}
 
     </div>
+    </>
   );
 }
 
